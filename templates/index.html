@@ -1,0 +1,625 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="{% static 'assets/images/logo.png' %}" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/d69e450873.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;1,800;1,900&family=Oswald:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italianno&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unna&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <title>OnlineTech</title>
+  </head>
+
+  <body>
+    <!--section navbar-->
+    <section>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark py-1 pl-3 fixed-top"
+        style="background-color: #0a2592"
+      >
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#"
+            ><!--img
+              style="height: 40px; border-radius: 50%"
+              class="img-fluid mr-2"
+              src="{% static 'assets/images/logo.png' %}"
+              alt=""
+            /-->ComTeCH</a
+          >
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#topic">Topics</a>
+              </li>
+              <!--li class="nav-item"><a class="nav-link" href="#matches"></a></li-->
+              <li class="nav-item">
+                <a class="nav-link active" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-outline-primary dropdown-toggle mb-1"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <span class="material-symbols-outlined"
+                      >account_circle</span
+                    >
+                  </button>
+                  <ul
+                    class="dropdown-menu bg-dark"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <li>
+                      <a class="dropdown-item text-white mr-2" href="#"
+                        ><span class="material-symbols-outlined mr-2"
+                          >account_box</span
+                        >View Profile</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item text-white mr-2" href="#"
+                        ><span class="material-symbols-outlined mr-2"
+                          >settings</span
+                        >Account Settings</a
+                      >
+                    </li>
+                    <!--li><a class="dropdown-item" href="#">Something else here</a></-li-->
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/logout"
+                  ><span class="bg-danger px-2 py-2 mt-2 rounded"
+                    >Logout</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!--End of Navbar-->
+
+    <!--div class="modal fade justify-content-center" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered justify-content-center" role="document">
+        <div class="modal-content justify-content-center text-white pb-4" style="border:solid 3px #fff;">
+          <div class="modal-header justify-content-center" style="background:#89072c">
+            <h5 class="modal-title text-center text-white ml-auto" id="myModalLabel">
+             <span class="p-1">Contact Us</span>
+            </h5>
+            <button type="button" class="close btn btn-outline-danger" data-dismiss="modal" aria-label="Close" style="">
+              <span aria-hidden="">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body form1 mb-2">
+            <form action="#" class="text-white" style="width:100%;" method="post" autocomplete="off">
+              <div class="form-group my-3">
+                <input type="text" name="name" id="name" class="text-white name form-control" placeholder="Enter Your Name..." style="color:#fff;background-color:#76ade5" />
+              </div>
+              <div class="form-group my-3">
+                <input type="tel" name="number" id="number" class="number text-white form-control" placeholder="Enter Your Number..." style="color:#fff; background-color:#76ade5"/>
+              </div>
+              <div class="form-group my-3">
+                <textarea placeholder="Type message....." name="message2" rows="4" class="form-control message text-white" style="color:#fff;background-color:#76ade5" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary text-white mb-2">
+                <!-span class="material-symbols-outlined py-1 mr-2">send</!--span->Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </!--div-->
+
+    <!--Search Bar-->
+    <section class="pt-4 mt-4" style="background-color: #16161f">
+      <div
+        class="justifyy-content-center text-center mt-3"
+        style="background-color: #16161f"
+      >
+        <div class="container shadow">
+          <div class="row my-3">
+            <div class="col-md-7 col-lg-7 justify-content-start">
+              <h5 class="text-center text-white">Make a Search</h5>
+              <form
+                action=""
+                class="d-flex justify-content-center form-inline my-2"
+              >
+                <input
+                  class="mr-sm-2"
+                  type="search"
+                  placeholder="Browse a topic..."
+                  aria-label="Search"
+                  style="padding: 0.3rem 2rem; border-radius: 1.2rem"
+                />
+                <button
+                  class="btn btn-outline-success text-white my-sm-0 rounded"
+                  type="submit"
+                  style="padding: 0.3rem"
+                >
+                  <i
+                    class="fa-solid fa-magnifying-glass"
+                    style="width: 1.5rem"
+                  ></i>
+                </button>
+              </form>
+            </div>
+            <div class="col-md-5 shadow justify-content-end text-white">
+              <p style="font-size: 1.5rem; margin: 1.2rem">
+                <a class="pluslink" href="/topic1"
+                  ><span
+                    class="bg-danger text-white py-1 px-4"
+                    style="border-radius: 10px"
+                    >Get Started</span
+                  ></a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--hr class="bg-white"-->
+    <!--end of search-->
+
+    <!--header section-->
+    <section class="header" id="header">
+      <div
+        class="container header shadow justify-content-center text-center text-white my-3"
+      >
+        <h2>Some IT Images</h2>
+        <div class="row my-3">
+          <div class="col-md-3 col-lg-3 my-2 p-2 shadow">
+            <div>
+              <img
+                src="{% static 'assets/images/computer.jpg' %}"
+                height="200"
+                style="width: 100%"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 my-2 p-2 shadow">
+            <div>
+              <img
+                src="{% static 'assets/images/computer1.jpg' %}"
+                height="200"
+                style="width: 100%"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 my-2 p-2 shadow">
+            <div>
+              <img
+                src="{% static 'assets/images/computer2.jpg' %}"
+                height="200"
+                style="width: 100%"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 my-2 p-2 shadow">
+            <div>
+              <img
+                src="{% static 'assets/images/computer.jpg' %}"
+                height="200"
+                style="width: 100%"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end of header-->
+
+    <!--Section About-->
+    <section id="about" class="">
+      <div class="container shadow my-4 pt-4" style="background-color: #171b1f">
+        <div class="text-center pt-4">
+          <h2 class="text-white mt-2">
+            <span class="bg-danger px-3 py-2">About Us</span>
+          </h2>
+        </div>
+        <hr class="bg-white" />
+        <div class="row text-white mx-3 py-2 rounded">
+          <div class="col-md-8 col-lg-8 shadow" style="font-size: 1.3rem">
+            <p>
+              <em class="text-info">ComTeCH</em> is a Computer Technology;
+              Online computer teaching platform where anyone who is interested
+              in studying computer can start even if you don't know any
+              knowledge in computer before. <br />There is a quiz at the end of
+              each section where where you can answer a quiz after completing a
+              level which will enable you to go to the next level
+            </p>
+            <p>
+              We are a team of experience educators who are passionate about
+              providing quality education to students all over the world. Our
+              mission is to take education accessible and affordable to
+              everyone!
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-4 p-2">
+            <p>
+              <img height="200" width="100%" src="{% static 'assets/images/intro.jpg' %}" alt="" />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Back to top button-->
+    <button
+      onclick="topFunction()"
+      id="myBtn"
+      title="Go to top"
+      class="justify-content-center text-center"
+    >
+      <i class="fa-solid fa-angles-up"></i>
+    </button>
+
+    <!--topics section-->
+    <section id="topic" class="">
+      <div class="container my-1 pt-4 shadow" style="background-color: #171b1f">
+        <div class="text-center pt-4">
+          <h2 class="text-white mt-2">
+            <span class="bg-danger px-3 py-2">Topics</span>
+          </h2>
+        </div>
+        <hr class="bg-white" />
+        <div class="row text-white mx-3 py-2 rounded" style="font-size: 1.3rem">
+          <div class="col-md-4 col-lg-4 my-2 wrapper">
+            <div
+              class="p-3 shadow topic mx-1 square tp-transform"
+              tabindex="0"
+              style="background-color: #363e5f; border-radius: 10px"
+            >
+              <a class="text-white pluslink" href="/topic1"
+                >Introduction to Computer</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 my-2">
+            <div
+              class="p-3 shadow topic mx-1 square tp-transform"
+              tabindex="0"
+              style="background-color: #363e5f; border-radius: 10px"
+            >
+              <a class="text-white pluslink" href="/topic2">Generations of Computer</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 my-2">
+            <div
+              class="p-3 shadow topic mx-1 square tp-transform"
+              tabindex="0"
+              style="background-color: #363e5f; border-radius: 10px"
+            >
+              <a class="text-white pluslink" href=""
+                >Classification of Computers</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 my-2">
+            <div
+              class="p-3 shadow topic mx-1 square tp-transform"
+              tabindex="0"
+              style="background-color: #363e5f; border-radius: 10px"
+            >
+              <a class="text-white pluslink" href="">Types of Computers</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 my-2">
+            <div
+              class="p-3 shadow topic mx-1 square tp-transform"
+              tabindex="0"
+              style="background-color: #363e5f; border-radius: 10px"
+            >
+              <a class="text-white pluslink" href=""
+                >Characteristics of Computer</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 my-2">
+            <div
+              class="p-3 shadow topic mx-1 square tp-transform"
+              tabindex="0"
+              style="background-color: #363e5f; border-radius: 10px"
+            >
+              <a class="text-white pluslink" href="">Advantages of Computer</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 my-2">
+            <div
+              class="p-3 shadow topic mx-1 square tp-transform"
+              tabindex="0"
+              style="background-color: #363e5f; border-radius: 10px"
+            >
+              <a class="text-white pluslink" href=""
+                >Disadvantages of Computer</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 my-2">
+            <div
+              class="p-3 shadow topic mx-1 square tp-transform"
+              tabindex="0"
+              style="background-color: #363e5f; border-radius: 10px"
+            >
+              <a class="text-white pluslink" href="">Computer Software</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 my-2">
+            <div
+              class="p-3 shadow topic mx-1 square tp-transform"
+              tabindex="0"
+              style="background-color: #363e5f; border-radius: 10px"
+            >
+              <a class="text-white pluslink" href="">Computer Hardware</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 my-2">
+            <div
+              class="p-3 shadow topic mx-1 square tp-transform"
+              tabindex="0"
+              style="background-color: #363e5f; border-radius: 10px"
+            >
+              <a class="text-white pluslink" href=""
+                >Computer Hardware Devices</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 my-2">
+            <div
+              class="p-3 shadow topic mx-1 square tp-transform"
+              tabindex="0"
+              style="background-color: #363e5f; border-radius: 10px"
+            >
+              <a class="text-white pluslink" href=""
+                >Blog Diagram of a Computer</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-4 my-2">
+            <div
+              class="p-3 shadow topic mx-1 square tp-transform"
+              tabindex="0"
+              style="background-color: #363e5f; border-radius: 10px"
+            >
+              <a class="text-white pluslink" href="">Application of Computer</a>
+            </div>
+          </div>
+          <div
+            class="my-4 py-4 col-md-12 col-lg-12 shadow justify-content-center text-center"
+          >
+            <a class="text-white pluslink" href="/topic1"
+              ><span
+                class="bg-primary px-3 py-1 rounded getstarted"
+                style="font-size: 1.2rem"
+                >Get Started<i
+                  class="fa-solid fa-chevron-right ml-2"
+                  style="color: white; font-size: 1.2rem"
+                ></i></span
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <!--end of topics-->
+
+    <!--footer section-->
+    <section class="pb-8" id="footer" style="background-color: #010154">
+      <div class="container mt-2 pt-3">
+        <div class="row footer">
+          <div class="col-md-4 col-lg-4 text-white">
+            <div class="text-white text-center">
+              <h4>ComTecH</h4>
+              <p>Location: <i>Bamenda-cameroon</i></p>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <h4 class="text-center text-white">Socials</h4>
+            <ul
+              class="d-flex text-white pt-2 justify-content-center"
+              style="list-style-type: none"
+            >
+              <li>
+                <a class="text-white mx-1 px-3" href=""
+                  ><i class="fa-brands fa-facebook" style="font-size: 2rem"></i
+                ></a>
+              </li>
+              <li>
+                <a class="text-white mx-1 px-3" href=""
+                  ><i class="fa-brands fa-x-twitter" style="font-size: 2rem"></i
+                ></a>
+              </li>
+              <li>
+                <a class="text-white mx-1 px-3" href=""
+                  ><i class="fa-brands fa-whatsapp" style="font-size: 2rem"></i
+                ></a>
+              </li>
+              <li>
+                <a class="text-white mx-1 px-3" href=""
+                  ><i class="fa-brands fa-linkedin" style="font-size: 2rem"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-lg-4 mb-4 pb-3">
+            <h4 class="text-center text-white">Useful Links</h4>
+            <ul
+              class="d-flex text-white pt-2 justify-content-center"
+              style="list-style-type: none"
+            >
+              <li>
+                <a class="text-white px-1 pluslink" href="#about">About</a>
+              </li>
+              <li>
+                <a class="text-white px-1 pluslink" href="#topic">Topics</a>
+              </li>
+              <li>
+                <a
+                  class="text-white px-1 pluslink"
+                  href=""
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fixed-bottom" style="background-color: #020218">
+      <div class="container">
+        <div class="row mx-3 text-white justify-content-center pt-2">
+          <div class="col-md-6 c0l-lg-6 text-center">
+            <p><em>CopyRight: &copy;2023. All Right Reserved!</em></p>
+          </div>
+          <div class="col-md-6 c0l-lg-6 text-center">
+            <p>
+              About Developer:
+              <a class="text-warning pluslink" href="#">Click here</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br /><br />
+    <!--End of footer-->
+
+    <!--Live chat section-->
+    <section>
+      <button class="open-button" onclick="openForm()">
+        <i class="fa-regular fa-comment-dots" style="font-size: 3rem"></i>
+      </button>
+
+      <div class="chat-popup shadow" id="myForm" style="z-index: 2000">
+        <form action="#" class="form-container" method="post">
+          <h5 class="text-white text-center"><em>Welcome to Live Chat</em></h5>
+          <p class="text-white fs-1 mb-3">
+            Our agent is not available right now! Please leave us a message and
+            we will get back to you.
+          </p>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="name"
+            placeholder="Enter Your Name..."
+          />
+          <label for="msg"></label>
+          <textarea
+            placeholder="Type message....."
+            name="message2"
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit" class="btn text-white">
+            <span class="material-symbols-outlined py-1">send</span>
+          </button>
+          <button type="button" class="btn cancel" onclick="closeForm()">
+            <span class="material-symbols-outlined py-1">Close</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+  </body>
+</html>

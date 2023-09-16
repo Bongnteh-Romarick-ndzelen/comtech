@@ -1,0 +1,41 @@
+/*Material icons*/
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 33px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color:#0c1010;
+  justify-content:center;
+  align-items:center;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  background-color:#52f5d5;
+  color:black !important;
+}
+input[type='text']:hover,
+input[type='email']:hover,
+input[type='password']:hover {
+  background-color:#aefbec;
+  color:black !important;
+}
