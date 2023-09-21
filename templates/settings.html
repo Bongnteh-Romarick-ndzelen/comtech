@@ -1,5 +1,4 @@
 {% load static %}
-{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,8 +44,8 @@
                             alt="" />ComTeCH</a>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link active" href="/#about">About</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="/#topic">Topics</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="/#about"></a></li>
+                            <li class="nav-item"><a class="nav-link active" href="/#topic"></a></li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="/contact">Contact</a>
                             </li>
@@ -58,22 +57,22 @@
                                     </button>
                                     <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
                                         <li>
-                                            <a class="dropdown-item text-white mr-2" href="#"><span
+                                            <a class="dropdown-item text-white mr-2" href="/profile"><span
                                                     class="material-symbols-outlined mr-2">account_box</span>View
                                                 Profile</a>
                                         </li>
-                                        <li>
-                                            <a class="dropdown-item text-white mr-2" href="/settings"><span
+                                        <!--li>
+                                            <a class="dropdown-item text-white mr-2" href="#"><span
                                                     class="material-symbols-outlined mr-2">settings</span>Account
                                                 Settings</a>
-                                        </li>
+                                        </!--li-->
                                         <!--li><a class="dropdown-item" href="#">Something else here</a></-li-->
                                     </ul>
                                 </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="/logout"><span
-                                        class="bg-danger px-2 py-2 mt-2 rounded">Log out</span></a>
+                                        class="bg-danger px-2 py-2 mt-2 rounded">Log Out</span></a>
                             </li>
                         </ul>
                     </div>
@@ -85,49 +84,93 @@
 
         <div class="container">
             <div class="row justify-content-center px-2 my-3">
-                <div class="col-md-5 shadow mx-3 px-3 py-2 justify-content-center">
-                    <h4 class="text-white text-center">Contact Us</h4>
+                <div class="col-md-6 shadow mx-1 py-5"  style="background:#0b0b0b;">
+                    <p class="text-white text-center"><a href="/">Home</a>/Account settings for <strong>@{{ user.username }}</strong></p>
                     <hr class="bg-white">
-                    <p class='text-center text-white'>Please contact us by filling the details below!</p>
-                    <div class="">
-                        <form action="" class=' py-5 px-5 text-white' method="post" style="background:#101032;">
+                    <div class="justify-content-start text-start text-white mx-3">
+                        <form action="" method="post" enctype="multipart/form-data">
                             {% csrf_token %}
-                            {% if messages %}
-                            <div class="messages">
-                                {% for message in messages %}
-                                <p{% if message.tags %} class="{{ message.tags }} p-2 rounded"{% endif %} style='background:#74b4fa;color: #061a64;'>{{ message }}</p>
-                                {% endfor %}
+                            <div class="">
+                                <img src="{{user_profile.profileimg.url}}" value='' class='mb-3' width='120' height="120" style="border-radius: 50%;" alt="">
+                                <input type="file" name="profileimg" id="" class='mb-2'><br>
                             </div>
-                            {% endif %}
-                            {{form.firstname|as_crispy_field}}
-                            {{form.email|as_crispy_field}}
-                            {{form.subject|as_crispy_field}}
-                            {{form.message|as_crispy_field}}
-                            <!--input type="text" name="name" id="" class="form-control text-white mb-4" value="" placeholder="*Name..." style="background:#09091b;">
 
-                            
-                            <input type="email" name="email" id="" class="form-control text-white mb-4" value="" placeholder="*Email..." style="background:#09091b;">
+                            <!--label for="name">Username:</!--label>
+                            <input type="text" name="username" id="" class="form-control text-white mb-2" value="{{user.username}}" style="background:#09091b;">
 
-                            
-                            <input type="text" name="subject" id="" class="form-control text-white mb-4" value="" placeholder="*Subject.." style="background:#09091b;">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="" class="form-control text-white mb-2" value="{{user.email}}" style="background:#09091b;"-->
 
-                            
-                            <textarea-- name="bio" id="bio" cols="" rows="5" class="form-control text-white mb-4" placeholder="*Message..." style="background:#09091b;"></textarea-->
+                            <label for="email">Location:</label>
+                            <input type="text" name="location" id="" class="form-control text-white mb-1" value="{{user_profile.location}}" style="background:#09091b;">
 
-                            <div class="justify-content-end my-3">
-                                <input type="submit" value="Send" class="btn-outline-primary rounded py-1 px-2 form-control">
+                            <label for="bio">Bio:</label>
+                            <textarea name="bio" id="bio" cols="" rows="4" class="form-control text-white mb-2" style="background:#09091b;">{{user_profile.bio}}</textarea>
+
+                            <div class="justify-content-end d-flex">
+                                <p><a class='mr-3 mt-4 pt-4 text-warning' href="/">Cancel</a></p>
+                                <p><input type="submit" value="Save" class="btn-outline-primary rounded py-1 px-2"></p>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+
         <!--Back to top button-->
         <button onclick="topFunction()" id="myBtn" title="Go to top" class="justify-content-center text-center">
             <i class="fa-solid fa-angles-up"></i>
         </button>
 
-
+        <!--footer section-->
+        <section class="pb-8 mx-0" id="footer" style="background-color: #010154">
+            <div class="container mt-2 pt-3">
+                <div class="row footer">
+                    <div class="col-md-4 col-lg-4 text-white">
+                        <div class="px-2 text-white text-center">
+                            <h4>ComTecH</h4>
+                            <p>Location: <i class="text-info">Bamenda-cameroon</i></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <h4 class="text-center text-white">Socials</h4>
+                        <ul class="d-flex text-white pt-2 justify-content-center" style="list-style-type: none">
+                            <li>
+                                <a class="text-white px-3" href=""><i class="fa-brands fa-facebook"
+                                        style="font-size: 2rem"></i></a>
+                            </li>
+                            <li>
+                                <a class="text-white px-3" href=""><i class="fa-brands fa-x-twitter"
+                                        style="font-size: 2rem"></i></a>
+                            </li>
+                            <li>
+                                <a class="text-white px-3" href=""><i class="fa-brands fa-whatsapp"
+                                        style="font-size: 2rem"></i></a>
+                            </li>
+                            <li>
+                                <a class="text-white px-3" href=""><i class="fa-brands fa-linkedin"
+                                        style="font-size: 2rem"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-lg-4 mb-4 pb-3">
+                        <h4 class="text-center text-white">Useful Links</h4>
+                        <ul class="d-flex text-white pt-2 justify-content-center" style="list-style-type: none">
+                            <li>
+                                <a class="text-white px-1" href="/index#about">About</a>
+                            </li>
+                            <li>
+                                <a class="text-white px-1" href="/index#topic">Topics</a>
+                            </li>
+                            <li>
+                                <a class="text-white px-1" 
+                                    href="/contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="fixed-bottom" style="background-color: #020218">
             <div class="container">
                 <div class="row mx-3 text-white justify-content-center pt-2">

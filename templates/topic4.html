@@ -27,7 +27,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
             id="bootstrap-css" />
         <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
-        <title>topic1</title>
+        <title>topic3</title>
     </head>
 
     <body>
@@ -40,16 +40,14 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand diff" href="/"><!--img class="img-fluid rounded mlogo" src=""
-                            alt="" /-->ComTeCH</a>
+                    <a class="navbar-brand diff" href="/"><img class="img-fluid rounded mlogo" src=""
+                            alt="" />ComTeCH</a>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="/#about"></a></li>
-                            <li class="nav-item"><a class="nav-link" href="/#topic"></a></li>
+                            <li class="nav-item"><a class="nav-link active" href="/#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="/#topic">Topics</a></li>
                             <li class="nav-item">
-                                <!--a class="nav-link" data-toggle="modal" data-target="#myModal"
-                                    href="#contact">Contact</!--a-->
-                                    <a class="nav-link" href="/contact">Contact</a>
+                                <a class="nav-link active" href="/contact">Contact</a>
                             </li>
                             <li class="nav-item">
                                 <div class="dropdown">
@@ -74,7 +72,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="/logout"><span
-                                        class="bg-danger px-2 py-2 mt-2 rounded">Log Out</span></a>
+                                        class="bg-danger px-2 py-2 mt-2 rounded">Logout</span></a>
                             </li>
                         </ul>
                     </div>
@@ -83,65 +81,26 @@
         </section>
         <!--End of Navbar-->
 
-        <div class="modal fade justify-content-center" id="myModal" tabindex="-1" role="dialog"
-            aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered justify-content-center" role="document">
-                <div class="modal-content justify-content-center text-white pb-4"
-                    style="background-color: #171b1f; border: solid 1px #fff">
-                    <div class="modal-header justify-content-center" style="background: #04011e">
-                        <h5 class="modal-title text-center text-white ml-auto" id="myModalLabel">
-                            <span class="p-1">Contact Us</span>
-                        </h5>
-                        <button type="button" class="close btn btn-outline-danger" data-dismiss="modal"
-                            aria-label="Close" style="">
-                            <span aria-hidden="">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body mb-2">
-                        <form action="#" class="text-white" style="width: 100%" method="post">
-                            <div class="form-group my-3">
-                                <input type="text" name="name" id="name" class="text-white name form-control"
-                                    placeholder="Enter Your Name..." style="color: #fff; background-color: #171b1f" />
-                            </div>
-                            <div class="form-group my-3">
-                                <input type="tel" name="number" id="number" class="number text-white form-control"
-                                    placeholder="Enter Your Number..." style="color: #fff; background-color: #171b1f" />
-                            </div>
-                            <div class="form-group my-3">
-                                <textarea placeholder="Type message....." name="message2" rows="4"
-                                    class="form-control text-white" style="color: #fff; background-color: #171b1f"
-                                    required></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary text-white mb-2">
-                                <!--span class="material-symbols-outlined py-1 mr-2">send</!--span-->Send
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!--Search Bar-->
-        <section class="pt-4 mt-4" style="background-color: #16161f;">
-            <div class="justifyy-content-center text-center mt-3" style="background-color: #16161f;">
+        <section class="pt-4 mt-4" style="background-color: #16161f">
+            <div class="justifyy-content-center text-center mt-3" style="background-color: #16161f">
                 <div class="container shadow">
                     <div class="row">
                         <div class="col-md-7 col-lg-7 justify-content-start">
                             <h5 class="text-center text-white">Make a Search</h5>
                             <form action="" class="d-flex justify-content-center form-inline">
                                 <input class="mr-sm-2" type="search" placeholder="Browse a topic..." aria-label="Search"
-                                    style="padding:.3rem 2rem; border-radius:1.2rem;" />
+                                    style="padding: 0.3rem 2rem; border-radius: 1.2rem" />
                                 <button class="btn btn-outline-success text-white my-sm-0 rounded" type="submit"
-                                    style="padding:.3rem;">
-                                    <i class="fa-solid fa-magnifying-glass" style="width:1.5rem;"></i>
+                                    style="padding: 0.3rem">
+                                    <i class="fa-solid fa-magnifying-glass" style="width: 1.5rem"></i>
                                 </button>
                             </form>
                         </div>
                         <div class="col-md-5 shadow justify-content-end text-white">
-                            <p style="font-size:1.5rem; margin:1.2rem;"><a class="pluslink" href="/topic2"><span
-                                        class="bg-danger text-white py-2 px-4"
-                                        style="border-radius:10px;">Continue</span></a>
+                            <p style="font-size: 1.2rem; margin: 1.2rem">
+                                <a class="pluslink" href="/topic5"><span class="bg-danger text-white py-2 px-4"
+                                        style="border-radius: 10px">Continue</span></a>
                             </p>
                         </div>
                     </div>
@@ -155,16 +114,17 @@
         <section class="next">
             <div class="row shadow justify-content-center text-center my-4 d-flex">
                 <div class="justify-content-start mr-3">
-                    <button class="btn btn-primary text-white justify-content-start mr-5 prev py-2"><a class="pluslink"
-                            href="/index"><i class="fa-solid fa-chevron-left" style="color:white; font-size:1.6rem;"></i><span
-                                class="px-2 py-4 text-center text-white" style="font-size:1.2rem;">Home</span></a>
+                    <button class="btn btn-primary text-white justify-content-start mr-5 prev py-2">
+                        <a class="pluslink" href="/topic3"><i class="fa-solid fa-chevron-left"
+                                style="color: white; font-size: 1.6rem"></i><span
+                                class="px-2 py-4 text-center text-white" style="font-size: 1.2rem">Home</span></a>
                     </button>
                 </div>
                 <div class="justify-content-start ml-3">
-                    <button class="btn btn-primary text-white justify-content-start ml-3 prev"><a class="pluslink"
-                            href="/topic2"><span class="px-2 py-4 text-center text-white"
-                                style="font-size:1.2rem;">Next</span><i class="fa-solid fa-chevron-right"
-                                style="color:white; font-size:1.6rem;"></i></a>
+                    <button class="btn btn-primary text-white justify-content-start ml-3 prev">
+                        <a class="pluslink" href="/topic5"><span class="px-2 py-4 text-center text-white"
+                                style="font-size: 1.2rem">Next</span><i class="fa-solid fa-chevron-right"
+                                style="color: white; font-size: 1.6rem"></i></a>
                     </button>
                 </div>
             </div>
@@ -172,92 +132,85 @@
         <!--end of next/prev-->
 
         <!--Topic section-->
-        <div class="container">
-            <div>
-                <h2 class="text-white text-center">
-                    <span class="text-info p-2">Introduction to Computer</span>
-                </h2>
-            </div>
-            <hr class="bg-white">
-            <div class="row shadow text-start">
-                <div class="col-md-12 col-lg-12 shadow text-start mx-3 p-3 my-2" style="background: rgb(28, 27, 27)">
-                    <h4 class="text-center text-info">What is a computer</h4>
-                    <p class="text-start text-white my-4" style="font-size: 1.3rem">
-                        A computer is a <span class="text-info">programmable device </span> that stores, retrieves, and
-                        processes data. The term "computer" was originally given to humans
-                        (human computers) who performed numerical calculations using
-                        mechanical calculators, such as the abacus and slide rule. The term
-                        was later given to mechanical devices as they began replacing human
-                        computers.
-                    </p>
-                    <p class="text-start text-white my-4" style="font-size: 1.3rem">
-                        Therefore a computer is an electronic device that accepts data (input) processes the data with the help of
-                        instructions stored in the memory (processing) gives an output that can be used in future
-                        (storage)
-                        or communicated with other computers in a network.
+        <div-- class="container">
+            
+            <div class="row my-3 offset-xl-7 mx-lg-5 px-5 py-3 shadow-lg rounded-2 mx-3" style="background:#020218">
+                <div class="justify-content-center">
+                    <h3 class="text-center justify-content-center text-info">Characteristics of Computer</h3>
+                    <hr class="bg-white" />
+                    <p class="text-start text-white my-1" style="font-size: 1.2rem">
+                        The characteristics of the computer system are as follows;
                     </p>
                 </div>
-                <div class="col-md-6 col-lg-6 shadow p-3 my-2" style="background:#120123;">
-                    <div class="shadow p-2 text-white">
-                        <h4 class="text-center text-info">Different Parts of a Computer</h4>
-                        <hr class="bg-white">
-                        <p>A computer is made up of three main components namely;
-                            <em class="text-info"> Input Devices, Storage devices</em> and <em class="text-info">Output
-                                devices</em>
-                        </p>
-                        <p><em class="text-info">Input Devices: </em>An input device is any hardware device that sends
-                            data to a computer,
-                            allowing you to interact with and control it. The most common input devices are the
-                            keyboard, mouse,
-                            and touch screen. Other popular input devices include trackballs, joysticks, and digital
-                            pens
-                        </p>
-                        <p><em class="text-info">Storage Devices: </em>This are devices that
-                            stores information and instructions in the computer memory
-                            so that a computer can retrieve it when needed. There are two types of storage devices used
-                            with computers: a primary storage device, such as RAM, and a secondary storage device, such
-                            as a hard drive. Secondary storage can be removable, internal, or external. Examples of
-                            computer storage are hard drive disk, floppy disk, RAM and so on!
-                        </p>
-                        <p><em class="text-info">Output Devices: </em>
-                            An output device is any piece of computer hardware that converts information into a
-                            human-perceptible form or, historically, into a physical machine-readable form for use with
-                            other non-computerized form.
-                            Examples are printers, Monitors, speakers, headphones etc...
-                        </p>
-                    </div>
+                <div class="px-3 text-white">
+                    <h6 class="text-info"><span class="text-info">High Speed</span></h6>
+                    <p>
+                        A computer works with much higher speed and accuracy compared to humans while performing mathematical calculations. Computers can process millions (1,000,000) of instructions per second. The time taken by computers for their operations is microseconds and nanoseconds.
+                    </p>
                 </div>
-                <div class="col-md-6 col-lg-6 shadow p-3 my-2">
-                    <div class="shadow p-2">
-                        <img height="" width="100%" src="{% static 'assets/images/topic1img.jpg' %}" alt="parts of computer">
-                    </div>
+                <div class="px-3 text-white">
+                    <h6 class="text-info"><span class="text-info">Accuracy</span></h6>
+                    <p>
+                        Computers perform calculations with 100% accuracy. Errors may occur due to data inconsistency or inaccuracy.
+                    </p>
+                </div>
+                <div class="px-3 text-white">
+                    <h6 class="text-info"><span class="text-info">Deligence</span></h6>
+                    <p>
+                        A computer can perform millions of tasks or calculations with the same consistency and accuracy. It doesn’t feel any fatigue or lack of concentration. Its memory also makes it superior to that of human beings.
+                    </p>
+                </div>
+                <div class="px-3 text-white">
+                    <h6 class="text-info"><span class="text-info">Versatility</span></h6>
+                    <p>
+                        Versatility refers to the capability of a computer to perform different kinds of works with same accuracy and efficiency.
+                    </p>
+                </div>
+                <div class="px-3 text-white">
+                    <h6 class="text-info"><span class="text-info">Reliability</span></h6>
+                    <p>
+                        A computer is reliable as it gives consistent result for similar set of data i.e., if we give same set of input any number of times, we will get the same result.
+                    </p>
+                </div>
+                <div class="px-3 text-white">
+                    <h6 class="text-info"><span class="text-info">Automation</span></h6>
+                    <p>
+                        Computer performs all the tasks automatically i.e. it performs tasks without manual intervention.
+                    </p>
+                </div>
+                <div class="px-3 text-white">
+                    <h6 class="text-info"><span class="text-info">Memory</span></h6>
+                    <p>
+                        A computer has built-in memory called primary memory where it stores data. Secondary storage are removable devices such as CDs, pen drives, etc., which are also used to store data.
+                    </p>
                 </div>
             </div>
 
-            <!--exercise-->
+            <!--exercise>
             <div class="row justify-content-center text-center my-4 p-4">
                 <div class="col-md-6 col-lg-6 justify-content-center text-center text-white px-3 py-2 my-3">
                     <a class="pluslink" href=""><span class="btn-success py-3 px-5 rounded">Try An
                             Exercise...</span></a>
                 </div>
             </div>
-            <hr class="bg-white">
-        </div>
+            <hr class="bg-white" />
+        </div-->
 
         <!--Next and Prev buttons-->
         <section class="next">
             <div class="row shadow justify-content-center text-center my-4 d-flex">
                 <div class="justify-content-start mr-3">
-                    <button class="btn btn-primary text-white justify-content-start mr-5 prev py-2"><a class="pluslink"
-                            href="/"><i class="fa-solid fa-chevron-left" style="color:white; font-size:1.6rem;"></i><span
-                                class="px-2 py-4 text-center text-white" style="font-size:1.2rem;">Home</span></a>
+                    <button class="btn btn-primary text-white justify-content-start mr-5 prev py-2">
+                        <a class="pluslink" href="/topic3"><i class="fa-solid fa-chevron-left"
+                                style="color: white; font-size: 1.6rem"></i><span
+                                class="px-2 py-2 text-center text-white" style="font-size: 1.5rem">Previous</span></a>
                     </button>
                 </div>
                 <div class="justify-content-start ml-3">
-                    <button class="btn btn-primary text-white justify-content-start ml-3 prev"><a class="pluslink"
-                            href="/topic2"><span class="px-2 py-4 text-center text-white"
-                                style="font-size:1.2rem;">Next</span><i class="fa-solid fa-chevron-right"
-                                style="color:white; font-size:1.6rem;"></i></a>
+                    <button class="btn btn-primary text-white justify-content-start ml-3 prev">
+                        <a class="pluslink" href="/topic5"><span class="px-2 py-2 text-center text-white"
+                                style="font-size: 1.5rem">Next</span><i class="fa-solid fa-chevron-right"
+                                style="color: white; font-size: 1.6rem"></i></a>
                     </button>
                 </div>
             </div>
@@ -271,7 +224,7 @@
 
         <!--footer section-->
         <section class="pb-8 mx-0" id="footer" style="background-color: #010154">
-            <div class="container mt-2 pt-3">
+            <div class="container mt-2 mb-4 pt-3">
                 <div class="row footer">
                     <div class="col-md-4 col-lg-4 text-white">
                         <div class="px-2 text-white text-center">
@@ -303,11 +256,15 @@
                     <div class="col-md-4 col-lg-4 mb-4 pb-3">
                         <h4 class="text-center text-white">Useful Links</h4>
                         <ul class="d-flex text-white pt-2 justify-content-center" style="list-style-type: none">
-                            <li><a class="text-white px-1" href="/index.html#about">About</a></li>
-                            <li><a class="text-white px-1" href="/index.html#topic">Topics</a></li>
                             <li>
-                                <a class="text-white px-1" data-toggle="modal" data-target="#myModal"
-                                    href="">Contact</a>
+                                <a class="text-white px-1" href="/index#about">About</a>
+                            </li>
+                            <li>
+                                <a class="text-white px-1" href="/index#topic">Topics</a>
+                            </li>
+                            <li>
+                                <a class="text-white px-1" 
+                                    href="/contact">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -317,16 +274,15 @@
         <section class="fixed-bottom" style="background-color: #020218">
             <div class="container">
                 <div class="row mx-3 text-white justify-content-center pt-2">
-                    <div class="col-md-6 c0l-lg-6 text-center">
+                    <div class="col-md-6 col-lg-6 text-center">
                         <p><em>CopyRight: &copy;2023. All Right Reserved!</em></p>
                     </div>
                     <div class="col-md-6 c0l-lg-6 text-center">
-                        <p>About Developer: <a class="text-warning" href="#">Click Here</a></p>
+                        <p>About Developer: <a class="text-warning" href="#">click Here</a></p>
                     </div>
                 </div>
             </div>
         </section>
-        <br /><br />
         <!--End of footer-->
 
         <!--Live chat section-->
@@ -338,7 +294,7 @@
             <div class="chat-popup shadow" id="myForm" style="z-index: 2000">
                 <form action="#" class="form-container" method="post">
                     <h5 class="text-white text-center"><em>Welcome to Live Chat</em></h5>
-                    <p class="text-white fs-1 mb-3">
+                    <p class="text-white fs-1 mb-2">
                         Our agent is not available right now! Please leave us a message and
                         we will get back to you.
                     </p>

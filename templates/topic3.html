@@ -1,0 +1,530 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <script src="https://kit.fontawesome.com/d69e450873.js" crossorigin="anonymous"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;1,800;1,900&family=Oswald:wght@400;500&display=swap"
+            rel="stylesheet" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Unna&display=swap" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+            id="bootstrap-css" />
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+        <title>topic3</title>
+    </head>
+
+    <body>
+        <!--section navbar-->
+        <section>
+            <nav class="navbar navbar-expand-lg navbar-dark py-1 pl-3 fixed-top" style="background-color: #0a2592">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand diff" href="/"><img class="img-fluid rounded mlogo" src=""
+                            alt="" />ComTeCH</a>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" href="/#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="/#topic">Topics</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/contact">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-primary dropdown-toggle mb-1" type="button"
+                                        id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                        <span class="material-symbols-outlined">account_circle</span>
+                                    </button>
+                                    <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
+                                        <li>
+                                            <a class="dropdown-item text-white mr-2" href="#"><span
+                                                    class="material-symbols-outlined mr-2">account_box</span>View
+                                                Profile</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item text-white mr-2" href="#"><span
+                                                    class="material-symbols-outlined mr-2">settings</span>Account
+                                                Settings</a>
+                                        </li>
+                                        <!--li><a class="dropdown-item" href="#">Something else here</a></-li-->
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/logout"><span
+                                        class="bg-danger px-2 py-2 mt-2 rounded">Logout</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <!--End of Navbar-->
+
+        <!--Search Bar-->
+        <section class="pt-4 mt-4" style="background-color: #16161f">
+            <div class="justifyy-content-center text-center mt-3" style="background-color: #16161f">
+                <div class="container shadow">
+                    <div class="row">
+                        <div class="col-md-7 col-lg-7 justify-content-start">
+                            <h5 class="text-center text-white">Make a Search</h5>
+                            <form action="" class="d-flex justify-content-center form-inline">
+                                <input class="mr-sm-2 mb-3" type="search" placeholder="Browse a topic..." aria-label="Search"
+                                    style="padding: 0.3rem 2rem; border-radius: 1.2rem" />
+                                <button class="btn btn-outline-success text-white my-sm-0 rounded" type="submit"
+                                    style="padding: 0.3rem">
+                                    <i class="fa-solid fa-magnifying-glass" style="width: 1.5rem"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-md-5 shadow justify-content-end text-white">
+                            <p style="font-size: 1.2rem; margin: 1.2rem">
+                                <a class="pluslink" href="/topic4"><span class="bg-danger text-white py-2 px-4"
+                                        style="border-radius: 10px">Continue</span></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--hr class="bg-white"-->
+        <!--end of search-->
+
+        <!--Next and Prev buttons-->
+        <section class="next">
+            <div class="row shadow justify-content-center text-center my-4 d-flex">
+                <div class="justify-content-start mr-3">
+                    <button class="btn btn-primary text-white justify-content-start mr-5 prev py-2">
+                        <a class="pluslink" href="/topic3"><i class="fa-solid fa-chevron-left"
+                                style="color: white; font-size: 1.6rem"></i><span
+                                class="px-2 py-4 text-center text-white" style="font-size: 1.2rem">Home</span></a>
+                    </button>
+                </div>
+                <div class="justify-content-start ml-3">
+                    <button class="btn btn-primary text-white justify-content-start ml-3 prev">
+                        <a class="pluslink" href="/topic4"><span class="px-2 py-4 text-center text-white"
+                                style="font-size: 1.2rem">Next</span><i class="fa-solid fa-chevron-right"
+                                style="color: white; font-size: 1.6rem"></i></a>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--end of next/prev-->
+
+        <!--Topic section-->
+        <div class="container">
+            <div>
+                <h2 class="text-white text-center">
+                    <span class="text-info p-2">Classification of Computers</span>
+                </h2>
+            </div>
+            <hr class="bg-white" />
+            <div class="row px-2 text-start justify-content-center shadow-lg" style="background-color:#020218;">
+                <div class="col-md-10 p-4 text-white justify-content-center mt-3 mb-1">
+                    <div>
+                        <p style="font-size: 1.3rem;">
+                            Computers can be classified on different bases. this bases include classification of
+                            computers on the bases 0f:
+                        </p>
+                        <ul style="list-style-type: circle; font-size:1.2rem;">
+                            <li>Size</li>
+                            <li>Functionality</li>
+                            <li>Purpose</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="justify-content-center">
+                    <h5 class="text-center justify-content-center text-info">Classification of computers on the bases of
+                        Size</h5>
+                    <hr class="bg-white" />
+                    <p class="text-start text-white my-4" style="font-size: 1rem">
+                        Based on physical size computers can be classified into four main groups
+                        <span class="text-info">Super computers, Mainframe computers, Minicomputers and
+                            Microcomputers</span>
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-6 my-2">
+                    <div class="p-2 text-white mx-1 p-3" style="background-color:#020218;">
+                        <h6 class="text-info text-center">Super computers</h6>
+                        <p>Supercomputers are the fastest, largest, most expensive & also the most powerful computers
+                            available</p>
+                        <h6 class="text-info">Characteristics</h6>
+                        <ul style="list-style-type: circle; font-size:1rem;">
+                            <li>Fastest computers</li>
+                            <li>Largest in size</li>
+                            <li>Most expensive</li>
+                            <li>Huge processing power</li>
+                            <li>Very heavy</li>
+                            <li>Generate a lot of heat</li>
+                            <li>Use multiple processors</li>
+                            <li>They are operated by computer specialists. A Supercomputer can be operated by over 500
+                                users at the same time</li>
+                        </ul>
+                        <p>They are applicable in many fields such as in scientific research,
+                            Defense and weapon analysis, nuclear energy research etc.
+                            Examples include CRAY T3D, NEC-500, CDC 6600, ABC (Atanasoff-Berry Computer), ENIAC
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6 my-2">
+                    <div class="p-2 text-white mx-1 p-3" style="background-color:#020218;">
+                        <h6 class="text-info text-center">Mainframe computers</h6>
+                        <p>Mainframes are less powerful & less expensive than supercomputers.
+                            Mainframe executes many programs concurrently and supports many simultaneous
+                            execution of programs.
+                        </p>
+                        <h6 class="text-info">Characteristics</h6>
+                        <ul style="list-style-type: circle; font-size:1rem;">
+                            <li>Have a large storage capacity</li>
+                            <li>Large in size</li>
+                            <li>Most expensive</li>
+                            <li>Huge processing power</li>
+                            <li>Multi-user</li>
+                            <li>Multi-processing</li>
+                        </ul>
+                        <p>Mainframe computers are mostly found in government departments,
+                            big organizations and companies which have large information processing needs,
+                            e.g., they are used; paring bills, etc. In communication networks
+                            such as the Internet where they act as Servers.
+                            Examples include IBM 360,4381. ICL 39 Series. etc
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6 my-2">
+                    <div class="p-2 text-white mx-1 p-3" style="background-color:#020218;">
+                        <h6 class="text-info text-center">Minicomputers</h6>
+                        <p>A Minicomputer is physically smaller than a mainframe. However, it can support the same
+                            peripheral devices supported by a mainframe.
+                        </p>
+                        <h6 class="text-info">Characteristics</h6>
+                        <ul style="list-style-type: circle; font-size:1rem;">
+                            <li>Multi-user, e.g., can be operated by 6 users at a time</li>
+                            <li>Easier to manufacture & maintain compared to mainframes</li>
+                            <li>Cheaper than the mainframes</li>
+                            <li>They handle small amounts of data, are less powerful, & have less memory than the
+                                mainframes</li>
+                            <li>Minicomputers are slow compared to mainframe computers</li>
+                        </ul>
+                        <p>
+                            Minicomputers are Used in scientific laboratories research institutions, Engineering plants,
+                            Automatic processing etc
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6 my-2">
+                    <div class="p-2 text-white mx-1 p-3" style="background-color:#020218;">
+                        <h6 class="text-info text-center">Microcomputers</h6>
+                        <p>Microcomputers are the PCs mostly found today in homes, schools & many small offices. They
+                            are called Personal Computers (PCs) because they are designed to be used by one person at a
+                            time..
+                        </p>
+                        <h6 class="text-info">Characteristics</h6>
+                        <ul style="list-style-type: circle; font-size:1rem;">
+                            <li>Are cheaper than both mini & mainframe computers.</li>
+                            <li>Are very fast (i.e. have high processing speeds).</li>
+                            <li>Small in size, hence they occupy less space in an office</li>
+                            <li>Are more energy efficient (i.e., consume less power).</li>
+                            <li>Are more reliable than the early Mainframe computers.</li>
+                        </ul>
+                        <p>
+                            Microcomputers are commonly used in: <span class="text-info">Training and learning
+                                institutions such as schools.
+                                Small business enterprises, and
+                                Communication centers as terminals. etc</span>.Examples include Desktop
+                            computer,Laptops,Tablet etc
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row shadow-lg py-4  px-2 text-start justify-content-center" style="background: #141017">
+                <div class="text-center justify-content-center">
+                    <h5 class="text-center justify-content-center text-info">Classification of computers on the bases of
+                        Purpose</h5>
+                    <hr class="bg-white" />
+                    <p class="text-start text-white my-4" style="font-size: 1rem">
+                        Computers can be classified according to the tasks they perform as
+                        <span class="text-info">general or special purpose computers.</span>
+                    </p>
+                </div>
+                <div class="col-md-6 text-white">
+                    <div class="mx-2 shadow p-3 text-white rounded"
+                        style="background-color:#09091c; border: solid 3px #070011">
+                        <h5 class="text-info text-center">General purpose computers</h5>
+                        <p>They are the most common types of computers in use today. Their flexibility enables them to
+                            be applied in a wide range of applications like;
+                            <span class="text-info">Document processing, Performing calculations, Accounting, Data and
+                                information management</span><br>
+                            Examples of general-purpose computers: Mainframes, Minicomputers, Microcomputers & Laptops
+                            used in most offices & schools
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 text-white">
+                    <div class="mx-2 shadow p-3 text-white rounded"
+                        style="background-color:#09091c; border: solid 3px #070011">
+                        <h5 class="text-info text-center">Special (or Specific) purpose computers</h5>
+                        <p>A special-purpose computer is designed to handle/accomplish a particular specific task only.
+                            Such computers cannot perform any other task except the one they were meant to do.
+                            Therefore, the programs which are used in a special-purpose computer are fixed (hard-wired)
+                            at the time of manufacture.
+                            For example In a computer Network, the Front End Processor (FEP) is only used to control the
+                            communication of information between the various workstations and the host computer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-3 offset-xl-7 mx-lg-5 px-5 py-3 shadow-lg rounded-2" style="background:#020218">
+                <div class="justify-content-center">
+                    <h5 class="text-center justify-content-center text-info">Classification of computers on the bases of
+                        Functionality</h5>
+                    <hr class="bg-white" />
+                    <p class="text-start text-white my-4" style="font-size: 1rem">
+                        Usually, there are two forms of data; Digital data, and Analogue data. Computers can be
+                        classified according to the type of data they can process as
+                        <span class="text-info">Digital, Analog and Hybrid</span>
+                    </p>
+                </div>
+                <div class="my-2 p-3 text-white">
+                    <h6 class="text-info">
+                        Digital Computers
+                    </h6>
+                    <p>
+                        This is the most commonly used type of computers.
+
+                        Digital computers process data that is discrete in nature. Discrete data also known as digital
+                        data is usually represented using a two-state square waveform. . It can process both numeric &
+                        alphabetic data within the computer, e.g., 0, 1, 2, 3…, A,B,C….
+
+                        Their operation is based on 2 states, “ON” & “OFF” or on digits “1” & “0”. Therefore, any data
+                        to be manipulated by a digital computer must first be converted to digital form.
+
+                        Most of the devices found at homes today are digital in nature. <br>
+                        Examples include
+
+                        A Television with a button which is pressed to increase or decrease the volume,
+                        Digital watches,
+                        Calculators,
+                    </p>
+                </div>
+                <div class="my-2 p-3 text-white">
+                    <h6 class="text-info">
+                        Analog Computer
+                    </h6>
+                    <p>
+                        An Analogue computer is a computer that operates on continuous data. They carry out their data
+                        processing by measuring the amount of change that occurs in physical attributes/quantities, such
+                        as changes in electrical voltage, speed, currents, pressure, length, temperature, humidity, etc.
+                        An Analogue computer is usually a special-purpose device that is dedicated to a single task. For
+                        example, they are used in specialized areas such as in:
+
+                        Scientific or engineering experiments,
+                        Military weapons,
+                        Controlling manufacturing processes like monitoring & regulating furnace temperatures and
+                        pressures.
+                        Weather stations to record & process physical quantities, e.g., wind, cloud speed, temperature,
+                        etc.
+                    </p>
+                    <p>
+                        Examples of analogue devices:
+
+                        Thermometer.It uses a volume of Mercury to show temperature. The Thermometer is calibrated to
+                        give an exact temperature reading. <br>
+                        A Petrol pump measures the rate of flow of Gasoline (petrol) & converts the volume delivered to
+                        2 readings; one showing the volume & the other showing the cost. etc
+                    </p>
+                </div>
+                <div class="my-2 p-3 text-white">
+                    <h6 class="text-info">
+                        Hybrid Computers
+                    </h6>
+                    <p>
+                        Hybrid computers are designed to process both analogue & digital data. They combine both the
+                        functional capabilities of the digital and analogue computers.
+
+                        Hybrid computers are designed by interconnecting the elements of a digital computer & analogue
+                        computer directly into one processor, using a suitable interfacing circuitry.
+
+                        Hybrid computers are more expensive
+                    </p>
+                    <p>
+                        Example; <br>
+
+                        In a hospital Intensive Care Unit, an analogue device may be used to measure the functioning of
+                        a patient’s heart, temperature and other vital signs. These measurements may then be converted
+                        into numbers and send to a digital device, which may send an immediate signal to the nurses’
+                        station if any abnormal readings are detected.
+                    </p>
+                </div>
+            </div>
+
+            <!--exercise-->
+            <div class="row justify-content-center text-center my-4 p-4">
+                <div class="col-md-6 col-lg-6 justify-content-center text-center text-white px-3 py-2 my-3">
+                    <a class="pluslink" href=""><span class="btn-success py-3 px-5 rounded">Try An
+                            Exercise...</span></a>
+                </div>
+            </div>
+            <hr class="bg-white" />
+        </div>
+
+        <!--Next and Prev buttons-->
+        <section class="next">
+            <div class="row shadow justify-content-center text-center my-4 d-flex">
+                <div class="justify-content-start mr-3">
+                    <button class="btn btn-primary text-white justify-content-start mr-5 prev py-2">
+                        <a class="pluslink" href="/topic3"><i class="fa-solid fa-chevron-left"
+                                style="color: white; font-size: 1.6rem"></i><span
+                                class="px-2 py-2 text-center text-white" style="font-size: 1.5rem">Previous</span></a>
+                    </button>
+                </div>
+                <div class="justify-content-start ml-3">
+                    <button class="btn btn-primary text-white justify-content-start ml-3 prev">
+                        <a class="pluslink" href="/topic4"><span class="px-2 py-2 text-center text-white"
+                                style="font-size: 1.5rem">Next</span><i class="fa-solid fa-chevron-right"
+                                style="color: white; font-size: 1.6rem"></i></a>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--end of next/prev-->
+
+        <!--Back to top button-->
+        <button onclick="topFunction()" id="myBtn" title="Go to top" class="justify-content-center text-center">
+            <i class="fa-solid fa-angles-up"></i>
+        </button>
+
+        <!--footer section-->
+        <section class="pb-8 mx-0" id="footer" style="background-color: #010154">
+            <div class="container mt-2 pt-3">
+                <div class="row footer">
+                    <div class="col-md-4 col-lg-4 text-white">
+                        <div class="px-2 text-white text-center">
+                            <h4>ComTecH</h4>
+                            <p>Location: <i class="text-info">Bamenda-cameroon</i></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <h4 class="text-center text-white">Socials</h4>
+                        <ul class="d-flex text-white pt-2 justify-content-center" style="list-style-type: none">
+                            <li>
+                                <a class="text-white px-3" href=""><i class="fa-brands fa-facebook"
+                                        style="font-size: 2rem"></i></a>
+                            </li>
+                            <li>
+                                <a class="text-white px-3" href=""><i class="fa-brands fa-x-twitter"
+                                        style="font-size: 2rem"></i></a>
+                            </li>
+                            <li>
+                                <a class="text-white px-3" href=""><i class="fa-brands fa-whatsapp"
+                                        style="font-size: 2rem"></i></a>
+                            </li>
+                            <li>
+                                <a class="text-white px-3" href=""><i class="fa-brands fa-linkedin"
+                                        style="font-size: 2rem"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-lg-4 mb-4 pb-3">
+                        <h4 class="text-center text-white">Useful Links</h4>
+                        <ul class="d-flex text-white pt-2 justify-content-center" style="list-style-type: none">
+                            <li>
+                                <a class="text-white px-1" href="/index#about">About</a>
+                            </li>
+                            <li>
+                                <a class="text-white px-1" href="/index#topic">Topics</a>
+                            </li>
+                            <li>
+                                <a class="text-white px-1" 
+                                    href="/contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="fixed-bottom" style="background-color: #020218">
+            <div class="container">
+                <div class="row mx-3 text-white justify-content-center pt-2">
+                    <div class="col-md-6 c0l-lg-6 text-center">
+                        <p><em>CopyRight: &copy;2023. All Right Reserved!</em></p>
+                    </div>
+                    <div class="col-md-6 c0l-lg-6 text-center">
+                        <p>About Developer: <a class="text-warning" href="#">click Here</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br /><br />
+        <!--End of footer-->
+
+        <!--Live chat section-->
+        <section>
+            <button class="open-button" onclick="openForm()">
+                <i class="fa-regular fa-comment-dots" style="font-size: 3rem"></i>
+            </button>
+
+            <div class="chat-popup shadow" id="myForm" style="z-index: 2000">
+                <form action="#" class="form-container" method="post">
+                    <h5 class="text-white text-center"><em>Welcome to Live Chat</em></h5>
+                    <p class="text-white fs-1 mb-3">
+                        Our agent is not available right now! Please leave us a message and
+                        we will get back to you.
+                    </p>
+                    <input type="text" name="name" id="name" class="name" placeholder="Enter Your Name..." />
+                    <label for="msg"></label>
+                    <textarea placeholder="Type message....." name="message2" rows="4" required></textarea>
+                    <button type="submit" class="btn text-white">
+                        <span class="material-symbols-outlined py-1">send</span>
+                    </button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">
+                        <span class="material-symbols-outlined py-1">Close</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="{% static 'assets/js/script.js' %}"></script>
+    </body>
+
+</html>

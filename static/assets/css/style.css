@@ -607,7 +607,7 @@ html {
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
+  max-width: 400px;
   padding: 5px 11px;
   background-color: #04103e;
   border-radius:10px;
@@ -619,31 +619,32 @@ html {
   width: 100%;
   padding: 15px;
   margin: 2px 0 22px 0;
-  border: none;
-  background: #a0aff3;
+  background: #244642 !important;
+  border:solid 1px white !important;
   resize: none;
+  color:black important;
   min-height: 100px;
   border-radius:10px;
 }
 
 /* When the textarea gets focus, do something */
 .form-container textarea:focus {
-  background-color: #ddd;
+  background-color: #ddd important;
   outline: none;
   border-radius:10px;
 }
 
-.form-container .name {
-  background-color: #a0aff3;
-  padding: 10px 20px;
-  border: none;
-  color:#000000;
+.form-container .textinput {
+  background-color:  #244642 !important;
+  padding: 10px 20px !important;
+  border: solid 1px white !important;
   border-radius:5px;
+  color:black important;
   width: 100%;
   margin-bottom:10px;
 }
 .form-container .name:focus {
-  background-color: #ddd;
+  background-color: #ddd Important;
   outline: none;
   border-radius:5px;
 }
@@ -763,4 +764,22 @@ ul li .dropdown-item:hover {
 /*removing underline from a link*/
 a.pluslink {
   text-decoration:none !important;
+}
+
+/* contact */
+.textarea, .textinput {
+  background:#0d1a39 !important;
+  color:white !important;
+  border:1px solid white important;
+}
+.textarea {
+  height: 70px !important;
+  margin-top: 0;
+  border:1px solid white !important;
+}
+
+/*profile*/
+#bg{
+    background-repeat: no-repeat !important;
+    background-position: cover !important;
 }

@@ -1,11 +1,12 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
-    <link rel="shortcut icon" href="{% static 'assets/images/logo.png' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -74,9 +75,9 @@
           </button>
           <a class="navbar-brand" href="#"
             ><!--img
-              style="height: 40px; border-radius: 50%"
-              class="img-fluid mr-2"
-              src="{% static 'assets/images/logo.png' %}"
+              style="height: 40px; width:90px;"
+              class="img-fluid mr-1"
+              src="{% static 'assets/images/favicon.png' %}"
               alt=""
             /-->ComTeCH</a
           >
@@ -113,14 +114,14 @@
                     aria-labelledby="dropdownMenuButton"
                   >
                     <li>
-                      <a class="dropdown-item text-white mr-2" href="#"
+                      <a class="dropdown-item text-white mr-2" href="/profile"
                         ><span class="material-symbols-outlined mr-2"
                           >account_box</span
                         >View Profile</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item text-white mr-2" href="#"
+                      <a class="dropdown-item text-white mr-2" href="/settings"
                         ><span class="material-symbols-outlined mr-2"
                           >settings</span
                         >Account Settings</a
@@ -133,7 +134,7 @@
               <li class="nav-item">
                 <a class="nav-link active" href="/logout"
                   ><span class="bg-danger px-2 py-2 mt-2 rounded"
-                    >Logout</span
+                    >Log Out</span
                   ></a
                 >
               </li>
@@ -290,22 +291,13 @@
         </div>
         <hr class="bg-white" />
         <div class="row text-white mx-3 py-2 rounded">
+          {% for topic in topics %}
           <div class="col-md-8 col-lg-8 shadow" style="font-size: 1.3rem">
             <p>
-              <em class="text-info">ComTeCH</em> is a Computer Technology;
-              Online computer teaching platform where anyone who is interested
-              in studying computer can start even if you don't know any
-              knowledge in computer before. <br />There is a quiz at the end of
-              each section where where you can answer a quiz after completing a
-              level which will enable you to go to the next level
-            </p>
-            <p>
-              We are a team of experience educators who are passionate about
-              providing quality education to students all over the world. Our
-              mission is to take education accessible and affordable to
-              everyone!
+              {{topic.about}}
             </p>
           </div>
+          {% endfor %}
           <div class="col-md-4 col-lg-4 p-2">
             <p>
               <img height="200" width="100%" src="{% static 'assets/images/intro.jpg' %}" alt="" />
@@ -335,6 +327,7 @@
         </div>
         <hr class="bg-white" />
         <div class="row text-white mx-3 py-2 rounded" style="font-size: 1.3rem">
+          
           <div class="col-md-4 col-lg-4 my-2 wrapper">
             <div
               class="p-3 shadow topic mx-1 square tp-transform"
@@ -363,29 +356,18 @@
               tabindex="0"
               style="background-color: #363e5f; border-radius: 10px"
             >
-              <a class="text-white pluslink" href=""
+              <a class="text-white pluslink" href="/topic3"
                 >Classification of Computers</a
               >
             </div>
           </div>
-
           <div class="col-md-4 col-lg-4 my-2">
             <div
               class="p-3 shadow topic mx-1 square tp-transform"
               tabindex="0"
               style="background-color: #363e5f; border-radius: 10px"
             >
-              <a class="text-white pluslink" href="">Types of Computers</a>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-lg-4 my-2">
-            <div
-              class="p-3 shadow topic mx-1 square tp-transform"
-              tabindex="0"
-              style="background-color: #363e5f; border-radius: 10px"
-            >
-              <a class="text-white pluslink" href=""
+              <a class="text-white pluslink" href="/topic4"
                 >Characteristics of Computer</a
               >
             </div>
@@ -397,7 +379,7 @@
               tabindex="0"
               style="background-color: #363e5f; border-radius: 10px"
             >
-              <a class="text-white pluslink" href="">Advantages of Computer</a>
+              <a class="text-white pluslink" href="/topic5">Advantages /Disadvantages</a>
             </div>
           </div>
 
@@ -407,9 +389,7 @@
               tabindex="0"
               style="background-color: #363e5f; border-radius: 10px"
             >
-              <a class="text-white pluslink" href=""
-                >Disadvantages of Computer</a
-              >
+              <a class="text-white pluslink" href="/topic6">Computer Software</a>
             </div>
           </div>
 
@@ -419,7 +399,7 @@
               tabindex="0"
               style="background-color: #363e5f; border-radius: 10px"
             >
-              <a class="text-white pluslink" href="">Computer Software</a>
+              <a class="text-white pluslink" href="/topic7">Computer Hardware</a>
             </div>
           </div>
 
@@ -429,17 +409,7 @@
               tabindex="0"
               style="background-color: #363e5f; border-radius: 10px"
             >
-              <a class="text-white pluslink" href="">Computer Hardware</a>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-lg-4 my-2">
-            <div
-              class="p-3 shadow topic mx-1 square tp-transform"
-              tabindex="0"
-              style="background-color: #363e5f; border-radius: 10px"
-            >
-              <a class="text-white pluslink" href=""
+              <a class="text-white pluslink" href="/topic8"
                 >Computer Hardware Devices</a
               >
             </div>
@@ -451,7 +421,7 @@
               tabindex="0"
               style="background-color: #363e5f; border-radius: 10px"
             >
-              <a class="text-white pluslink" href=""
+              <a class="text-white pluslink" href="/topic9"
                 >Blog Diagram of a Computer</a
               >
             </div>
@@ -463,7 +433,7 @@
               tabindex="0"
               style="background-color: #363e5f; border-radius: 10px"
             >
-              <a class="text-white pluslink" href="">Application of Computer</a>
+              <a class="text-white pluslink" href="/topic10">Application of Computer</a>
             </div>
           </div>
           <div
@@ -556,7 +526,7 @@
           <div class="col-md-6 c0l-lg-6 text-center">
             <p>
               About Developer:
-              <a class="text-warning pluslink" href="#">Click here</a>
+              <a class="text-warning pluslink" target="_blank" href="https://wa.me/237650982629">Click here</a>
             </p>
           </div>
         </div>
@@ -571,14 +541,23 @@
         <i class="fa-regular fa-comment-dots" style="font-size: 3rem"></i>
       </button>
 
-      <div class="chat-popup shadow" id="myForm" style="z-index: 2000">
-        <form action="#" class="form-container" method="post">
+      <div class="chat-popup shadow text-white" id="myForm" style="z-index: 2000">
+        <form action="#" class="form-container text-white" id="livechat" method="post">
+          {% csrf_token %}
           <h5 class="text-white text-center"><em>Welcome to Live Chat</em></h5>
           <p class="text-white fs-1 mb-3">
-            Our agent is not available right now! Please leave us a message and
-            we will get back to you.
+            Our agent is not available right now! Please leave us a message.
           </p>
-          <input
+          {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <p{% if message.tags %} class="{{ message.tags }} p-2 rounded"{% endif %} style='background:#74b4fa;color: #061a64;'>{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+          {{forms.name|as_crispy_field}}
+          {{forms.message|as_crispy_field}}
+          <!--input
             type="text"
             name="name"
             id="name"
@@ -586,12 +565,12 @@
             placeholder="Enter Your Name..."
           />
           <label for="msg"></label>
-          <textarea
+          <textarea--
             placeholder="Type message....."
             name="message2"
             rows="4"
             required
-          ></textarea>
+          ></textarea-->
           <button type="submit" class="btn text-white">
             <span class="material-symbols-outlined py-1">send</span>
           </button>
